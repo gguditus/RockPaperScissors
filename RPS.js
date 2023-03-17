@@ -57,9 +57,9 @@ function getResult(playerSelection, compSelection) {
       playerSelection +
       " beats " +
       compSelection +
-      "<br><br>Player score: " +
+      "</br>Player score: " +
       playerScore +
-      "<br>Computer score: " +
+      "</br>Computer score: " +
       compScore
     );
   } else {
@@ -69,9 +69,9 @@ function getResult(playerSelection, compSelection) {
       compSelection +
       " beats " +
       playerSelection +
-      "<br><br>Player score: " +
+      "</br>Player score: " +
       playerScore +
-      "<br>Computer score: " +
+      "</br>Computer score: " +
       compScore
     );
   }
