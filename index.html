@@ -4,23 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock Paper Scissors</title>
+    <link rel="icon" href="./images/RPS.png">
     <link rel="stylesheet" href="./styles.css" />
+    <title>Rock Paper Scissors</title>
   </head>
   <body>
     <h1 id="rpsTitle">Rock Paper Scissors</h1>
   </br>
     <div class="playerBtns">
+      <div class="rock">
+      <img class="rockImg" src="./images/rpsIcons/rock.png">
       <input type="button" value="Rock" />
+      </div>
+      <div class="paper">
+      <img class="paperImg" src="./images/rpsIcons/paper.png">
       <input type="button" value="Paper" />
+      </div>
+      <div class="scissors">
+      <img class="scissorsImg" src="./images/rpsIcons/scissors.png">
       <input type="button" value="Scissors" />
+      </div>
     </div>
 
     <div class="results">
       <div id="result"></div>
       <div id="gameResult"></div>
     </div>
-
+    <footer>
+      <p class="footerContent">
+        Made by Greg Guditus
+        <a
+          href="https://github.com/gguditus/DailyInspiration"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="footerLogo"
+            src="./images/GitHub_logo-3727426454.png"
+            alt="github logo with a link to the github repository of this project"
+          />
+        </a>
+      </p>
+    </footer>
     <script src="./RPS.js"></script>
   </body>
 </html>

@@ -6,13 +6,45 @@ body {
   align-items: center;
   padding: 5px;
   margin: 40px 5%;
-  background: linear-gradient(105deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3))
-    no-repeat fixed;
+  background: linear-gradient(105deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)) no-repeat fixed;
   color: darkslategray;
 }
 
 h1 {
   font-size: 40px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 55px;
+}
+
+.playerBtns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.rock,
+.paper,
+.scissors {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.rockImg,
+.paperImg,
+.scissorsImg {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin: 25px;
 }
 
 input {
@@ -44,9 +76,58 @@ input:disabled {
   box-shadow: 1px 1px 1px black, 0px 0px 2px black, 0px 0px 4px white;
 }
 
+button {
+  padding: 15px;
+  margin: 15px;
+  align-self: stretch;
+  background-color: blanchedalmond;
+  color: darkslategray;
+  border-radius: 7px;
+  border: none;
+  font-weight: bold;
+  box-shadow: 1px 1px 5px black, 0px 0px 20px black, 0px 0px 40px white;
+  font-size: 18px;
+  transition: ease 0.25s;
+}
+
+button:hover {
+  background-color: burlywood;
+  transform: scale(1.1);
+  font-weight: bolder;
+  border: solid 1px black;
+  box-shadow: 5px 5px 10px black, 0px 0px 20px black, 0px 0px 20px white;
+}
+
 .results {
   padding: 10px;
   font-size: 24px;
   font-weight: bold;
   text-shadow: 0px 0px 1px black, 0px 0px 2px black, 0px 0px 4px white;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 25vh;
+  color: #e0e1dd;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  max-width: 45vh;
+  padding: 20px;
+}
+
+.footerLogo {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  filter: invert(1);
 }
