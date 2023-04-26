@@ -53,27 +53,35 @@ function compSelect() {
   }
 }
 
-/*hard mode function, main difference here. takes into account the frequency the player chose each move*/
+/*hard mode function, main difference here. takes into account the frequency the player chose each move vs the total number of moves*/
 function hardCompSelect() {
-  let mostFrequentMove = Object.keys(playerMoveFreq).reduce((a, b) =>
-    playerMoveFreq[a] > playerMoveFreq[b] ? a : b
-  );
+  let rockMoves = playerMoveFreq["Rock"];
+  let paperMoves = playerMoveFreq["Paper"];
+  let scissorMoves = playerMoveFreq["Scissors"];
+  let numOfMoves = rockMoves + paperMoves + scissorMoves;
 
-  let counterMove;
-  if (mostFrequentMove === "Rock") {
-    counterMove = "Paper";
-  } else if (mostFrequentMove === "Paper") {
-    counterMove = "Scissors";
+  let randNum = Math.floor(Math.random() * numOfMoves);
+
+  let notSoRandomMove;
+
+  if (randNum < rockMoves) {
+    /*predicting rock so using paper*/
+    notSoRandomMove = "Paper";
+  } else if (randNum > rockMoves && randNum < rockMoves + paperMoves) {
+    /*predicting paper so using scissors*/
+    notSoRandomMove = "Scissors";
+  } else if (
+    randNum > rockMoves + paperMoves &&
+    randNum < rockMoves + paperMoves + scissorMoves
+  ) {
+    /*predicting scissors so using rock*/
+    notSoRandomMove = "Rock";
   } else {
-    counterMove = "Rock";
+    let moves = ["Rock", "Paper", "Scissors"];
+    notSoRandomMove = moves[Math.floor(Math.random() * 3)];
   }
 
-  if (playerMoveFreq[mostFrequentMove] == 0) {
-    let moves = ["Rock", "Paper", "Scissors"];
-    let random = Math.floor(Math.random() * 3);
-    counterMove = moves[random];
-  }
-  return counterMove;
+  return notSoRandomMove;
 }
 
 /*returns player selection if player won, otherwise returns computer selection*/
